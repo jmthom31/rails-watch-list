@@ -10,7 +10,7 @@
   <h3><%= bookmark.movie.title %> (<%= bookmark.movie.rating%>*)</h3>
   <p><%= bookmark.movie.overview %></p>
   <p><%= bookmark.comment %></p>
-  <p><%= link_to 'Delete', bookmark_path, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  <p><%= link_to 'Delete', bookmark_path(bookmark), method: :delete, data: { confirm: 'Are you sure?' } %></p>
 </div>
 <% end %>
 
