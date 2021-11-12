@@ -9,7 +9,7 @@
   <% @lists.each do |list| %>
     <div class="list">
       <h3><%= link_to list.name, list_path(list) %></h3>
-      <p><img src="<%= img %>" width = "300" alt=""></p>
+      <%= link_to image_tag(img, width: 500), list_path(list)%>
     </div>
   <% end  %>
 </div>
