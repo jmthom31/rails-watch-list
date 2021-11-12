@@ -14,7 +14,7 @@ puts 'Creating movies...'
   movie = Movie.create!(
     title: Faker::Movie.title,
     overview: Faker::Movie.quote,
-    poster_url: ['https://unsplash.com/photos/CiUR8zISX60', 'https://unsplash.com/photos/evlkOfkQ5rE', 'https://unsplash.com/photos/MAYsdoYpGuk', 'https://unsplash.com/photos/q8P8YoR6erg'].sample,
+    poster_url: ['https://images.unsplash.com/photo-1485846234645-a62644f84728?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1459&q=80', 'https://images.unsplash.com/photo-1535016120720-40c646be5580?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80', 'https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1456&q=80'].sample,
     rating: [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0].sample
   )
   puts "Creating movie with id #{movie.id}"

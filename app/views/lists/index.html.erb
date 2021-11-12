@@ -1,16 +1,15 @@
+<% img = 'https://images.unsplash.com/photo-1542204165-65bf26472b9b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1374&q=80' %>
+
 <div class="container">
 
 <p><%= link_to 'Add list', new_list_path, class:'btn btn-primary'%></p>
 
   <h1>Your movie lists</h1>
 
-  <ul>
   <% @lists.each do |list| %>
     <div class="list">
-      <li>
-        <%= link_to list.name, list_path(list) %>
-      </li>
+      <h3><%= link_to list.name, list_path(list) %></h3>
+      <p><img src="<%= img %>" width = "300" alt=""></p>
     </div>
   <% end  %>
-  </ul>
 </div>
