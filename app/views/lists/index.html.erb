@@ -1,15 +1,19 @@
-<% img = 'https://images.unsplash.com/photo-1542204165-65bf26472b9b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1374&q=80' %>
+<% img = 'https://images.unsplash.com/photo-1543536448-d209d2d13a1c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80' %>
 
-<div class="container">
+<div class="home-container">
 
-<p><%= link_to 'Add list', new_list_path, class:'btn btn-primary'%></p>
+  <div class="home-header-background">
+    <div class="home-header">
+      <p><%= link_to 'Add category', new_list_path, class:'btn category-btn'%></p>
 
-  <h1>Your movie lists</h1>
+      <h1>Movie categories</h1>
+    </div>
+  </div>
 
   <% @lists.each do |list| %>
-    <div class="list">
-      <h3><%= link_to list.name, list_path(list) %></h3>
-      <%= link_to image_tag(img, width: 500), list_path(list)%>
+    <div class="home-list">
+      <h3><%= link_to list.name.upcase, list_path(list) %></h3>
+      <%= link_to image_tag(img), list_path(list)%>
     </div>
   <% end  %>
 
