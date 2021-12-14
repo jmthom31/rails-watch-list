@@ -1,0 +1,39 @@
+.show-header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.movie-container {
+  margin-top: 16px;
+  width: 100%;
+  // display: flex;
+  // justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.movie {
+  width: 48%;
+  display: inline-block;
+  background-color: #ededed;
+}
+
+.movie-text {
+  text-align: left;
+  margin-top: 16px;
+  margin-left: 8px;
+}
+
+.movie img {
+  width: 100%;
+}
+
+.delete-btn {
+  background-color: #ff4800;
+  color: white;
+}
+
+.movie-text a:hover {
+  color: white;
+}

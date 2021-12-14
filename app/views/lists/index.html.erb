@@ -1,20 +1,19 @@
 <% img = 'https://images.unsplash.com/photo-1543536448-d209d2d13a1c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80' %>
 
 <div class="home-container">
-
   <div class="home-header-background">
     <div class="home-header">
       <p><%= link_to 'Add category', new_list_path, class:'btn category-btn'%></p>
-
       <h1>Movie categories</h1>
     </div>
   </div>
 
-  <% @lists.each do |list| %>
-    <div class="home-list">
-      <h3><%= link_to list.name.upcase, list_path(list) %></h3>
-      <%= link_to image_tag(img), list_path(list)%>
-    </div>
-  <% end  %>
-
+  <div class="home-list-container">
+    <% @lists.each do |list| %>
+      <div class="home-list">
+        <h3><%= link_to list.name.upcase, list_path(list) %></h3>
+        <%= link_to image_tag(img), list_path(list)%>
+      </div>
+    <% end  %>
+  </div>
 </div>
